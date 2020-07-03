@@ -1,0 +1,25 @@
+# diff
+# Betaflight / SPRACINGF3 3.1.6 Feb 21 2017 / 14:44:08 (1fd502c)
+
+feature -RX_PPM
+feature RX_SERIAL
+feature MOTOR_STOP
+serial 1 64 115200 57600 0 115200
+aux 0 0 0 1700 2100
+aux 1 1 0 900 2100
+rxfail 3 h
+set motor_pwm_protocol = BRUSHED
+set motor_pwm_rate = 15000
+set serialrx_provider = SBUS
+set gyro_sync_denom = 2
+set failsafe_delay = 30
+set failsafe_kill_switch = ON
+set baro_cf_vel =  0.985
+set pid_process_denom = 1
+profile 0
+
+rateprofile 0
+rateprofile 0
+
+
+# 
