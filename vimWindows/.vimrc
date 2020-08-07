@@ -16,8 +16,10 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'ajh17/Spacegray.vim'
+"Plugin 'morhetz/gruvbox'
 Plugin 'pangloss/vim-javascript'
 Plugin 'itchyny/lightline.vim'
+Plugin 'ternjs/tern_for_vim' , {'do':'npm install'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -25,6 +27,8 @@ filetype plugin indent on    " required
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 set vb t_vb=
+
+packadd! matchit
 
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -53,6 +57,7 @@ endif
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme spacegray
+"colorscheme gruvbox
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -101,3 +106,13 @@ let NERDTreeIgnore = ['\.pyc$']
 """"""""""""""""""""""""""""""""""""""""""
 set wildmenu
 set wildmode=longest:full,full
+
+"""""""""""""""""""""""""""""""""""""""""""
+" Ejecuta file en browser
+"""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F4> :exe ':silent !"c:\Program Files\Mozilla Firefox\firefox.exe" %'<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""
+" Jenkinsfile auto syntax
+"""""""""""""""""""""""""""""""""""""""""""
+au BufNewFile,BufRead Jenkinsfile setf groovy 
