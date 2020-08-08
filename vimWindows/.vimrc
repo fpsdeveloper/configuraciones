@@ -116,3 +116,10 @@ nnoremap <F4> :exe ':silent !"c:\Program Files\Mozilla Firefox\firefox.exe" %'<C
 " Jenkinsfile auto syntax
 """""""""""""""""""""""""""""""""""""""""""
 au BufNewFile,BufRead Jenkinsfile setf groovy 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" No muestro menu, toolbar ni scroll a la derercha
+""""""""""""""""""""""""""""""""""""""""""""""""""
+set go -=m
+set go -=T
+set go -=r
